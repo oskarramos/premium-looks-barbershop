@@ -9,7 +9,7 @@
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
   --font-display: "Bebas Neue", Impact, sans-serif;
   --font-body: "Manrope", "Segoe UI", sans-serif;
-  --header-h: 4.5rem;
+  --header-h: 5.25rem;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -107,38 +107,38 @@ h3 {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0 clamp(1rem, 3vw, 2rem);
-  background: linear-gradient(180deg, rgba(5, 5, 5, 0.92), rgba(5, 5, 5, 0.55) 70%, transparent);
-  backdrop-filter: blur(8px);
+  padding: 0.65rem clamp(0.85rem, 2.5vw, 1.5rem);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.18) 65%, transparent);
   transition: background 0.35s var(--ease), box-shadow 0.35s var(--ease);
 }
 
 .site-header.is-scrolled {
-  background: rgba(5, 5, 5, 0.94);
+  background: rgba(5, 5, 5, 0.9);
   box-shadow: 0 1px 0 var(--line);
 }
 
 .brand-mark {
+  position: relative;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
+  justify-content: center;
+  margin-right: auto;
   text-decoration: none;
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  letter-spacing: 0.08em;
-  z-index: 2;
+  flex-shrink: 0;
 }
 
 .brand-mark img {
-  width: 44px;
-  height: 44px;
+  width: clamp(58px, 8vw, 78px);
+  height: clamp(58px, 8vw, 78px);
   border-radius: 50%;
   object-fit: cover;
-  border: 1px solid rgba(200, 168, 130, 0.45);
+  border: 1px solid rgba(200, 168, 130, 0.55);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 .nav {
-  margin-left: auto;
+  margin-left: 0;
   display: flex;
   align-items: center;
   gap: 1.35rem;
@@ -223,8 +223,9 @@ body.nav-open .menu-toggle span:last-child {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 35%;
-  transform: scale(1.06);
+  object-position: center 30%;
+  transform: scale(1.04);
+  filter: contrast(1.06) saturate(1.05) brightness(1.05);
   animation: heroDrift 18s var(--ease) infinite alternate;
 }
 
@@ -232,8 +233,8 @@ body.nav-open .menu-toggle span:last-child {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.55) 48%, rgba(0, 0, 0, 0.28) 100%),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.25) 42%, rgba(0, 0, 0, 0.45) 100%);
+    linear-gradient(90deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.22) 42%, rgba(0, 0, 0, 0.08) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.12) 45%, rgba(0, 0, 0, 0.2) 100%);
 }
 
 .hero-content {
@@ -241,18 +242,18 @@ body.nav-open .menu-toggle span:last-child {
   z-index: 1;
   width: min(1120px, calc(100% - 2.5rem));
   margin-inline: auto;
-  max-width: 40rem;
+  max-width: 52rem;
   animation: riseIn 1s var(--ease) both;
 }
 
 .hero-brand {
   margin: 0 0 0.85rem;
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 8vw, 5.2rem);
-  letter-spacing: 0.04em;
-  line-height: 0.9;
+  font-size: clamp(3.8rem, 12vw, 7.5rem);
+  letter-spacing: 0.03em;
+  line-height: 0.88;
   color: var(--paper);
-  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+  text-shadow: 0 12px 48px rgba(0, 0, 0, 0.55);
   animation: riseIn 1.05s 0.08s var(--ease) both;
 }
 
